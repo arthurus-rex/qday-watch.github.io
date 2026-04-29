@@ -40,39 +40,53 @@
       <p>Independent researcher Giancarlo Lelli derived the private key from a 15-bit elliptic curve public key using standard cloud-available cloud computing hardware (IBM Quantum and Qiskit), then published his <a href="https://github.com/GiancarloLelli/quantum">code and strategy to GitHub</a>.  
        For these efforts, Lelli won The <a href=https://www.qdayprize.org/">QDay Prize</a> from <a href="https://www.projecteleven.com/">Project Eleven</a>, a one-Bitcoin award (valued at ~$77,800 at time of writing) for breaking the biggest ECC key with Shor's algorithm.  
        15-bit encryption is far from the 256-bit encryption protecting the Internet at large.</p>
+
        <p><b>ADDENDUM:</b> <i>April 28th, 2026</i> - 
        Craig Gidney, the author of a <a href="https://sigbovik.org/2025/proceedings.pdf#page=146">truly excellent work of academic comedy</a> has weighed in on this topic.
        Gidney's April Fool's paper describes a genuine, common fallacy associated with Shor's algorithm: when factoring small numbers, the performance of Shor's algorithm when using a quantum computer is no different than using a random number generator.  
        Lelli's QDay Prize contribution, <a href="https://algassert.com/post/2601">according to Gidney</a>, does not pass the sniff test.
        The Quantum Insider, as of the writing of this addendum, has not updated their article.</p>
 
+
       <h3>[April 23rd, 2026]  <a href="https://github.com/golang/go/issues/77626#issuecomment-4299122920">Golang's proposal for new ML-DSA API was just accepted</a></h3>
       <p><b>GitHub Issue</b> - <i>golang/go</i></p>
-      <p>One step closer to ML-DSA becoming available in Go 1.27 and unblocking PQC signatures in open source Go projects.  Thank you, Golang team!</p>
+      <p>One step closer to ML-DSA becoming available in Go 1.27 and unblocking PQC signatures in open source Go projects.  
+      Thank you, Golang team!</p>
 
 
       <h3>[April 21st, 2026]  <a href="https://arstechnica.com/security/2026/04/contrary-to-popular-superstition-aes-128-is-just-fine-in-a-post-quantum-world/">Contrary to popular superstition, AES-128 is just fine in a post-quantum world</a></h3>
       <p><b>Ars Technica</b> - <i>Dan Goodin</i></p>
-      <p>This article mostly just rehashes Filippo Valsorda's blog below, but with fewer technical details.  Read if you are scared of math.</p>
+      <p>This article mostly just rehashes Filippo Valsorda's blog below, but with fewer technical details.  
+      Read if you are scared of math.</p>
 
       <h3>[April 20th, 2026]  <a href="https://words.filippo.io/128-bits/">Quantum computers are not a threat to 128-bit symmetric keys</a></h3>
       <p><b>Filippo Valsorda</b> - <i>Blog by a senior cryptographic engineer and software developer on the Golang team.</i></p>
-      <p>Good breakdown on why Grover's algorithm has not been shown to provide any threatening speedup to brute-forcing AES-128.  Valsorda's opinion here reflects the majority opinion of cryptographic experts at this time, including NIST and Germany's BSI.  CNSA 2.0 (NSA) is the primary dissent, requiring 256-bit security for all algorithms including AES and SHA as a method of future-proofing.  However, AES-256 incurrs a hefty performance detriment and increases overall migration effort, with Valsorda saying, "Conflating necessary and unnecessary changes will cause needless churn and take resources away from the urgent updates."</p>
+      <p>Good breakdown on why Grover's algorithm has not been shown to provide any threatening speedup to brute-forcing AES-128.  
+      Valsorda's opinion here reflects the majority opinion of cryptographic experts at this time, including NIST and Germany's BSI.  
+      CNSA 2.0 (NSA) is the primary dissent, requiring 256-bit security for all algorithms including AES and SHA as a method of future-proofing.  
+      However, AES-256 incurrs a hefty performance detriment and increases overall migration effort, with Valsorda saying, "Conflating necessary and unnecessary changes will cause needless churn and take resources away from the urgent updates."</p>
 
       <h3>[April 17th, 2026]  <a href="https://arstechnica.com/security/2026/04/while-some-big-tech-players-accelerate-pqc-readiness-others-stay-the-course/">Recent advances push Big Tech closer to the Q-Day danger zone</h3></a>
       <p><b>Ars Technica</b> - <i>Dan Goodin</i></p>
-      <p>Good summary of all industry happenings the past few weeks plus historical context, all without being alarmist.  If you're just catching up, start here.  Notably, Ars omits that the Oratomic findings are still being evaluated by the wider cryptographic community (not a malicious omission, I'm sure).  They also draw attention to Apple having not responded to their request for comment on their PQC transition, but since <a href="https://security.apple.com/blog/imessage-pq3/">Apple has been incorporating PQC key encapsulation into iMessage since 2023</a>, it's probably in the works.  </p>
+      <p>Good summary of all industry happenings the past few weeks plus historical context, all without being alarmist.  
+      If you're just catching up, start here.  Notably, Ars omits that the Oratomic findings are still being evaluated by the wider cryptographic community (not a malicious omission, I'm sure).  
+      They also draw attention to Apple having not responded to their request for comment on their PQC transition, but since <a href="https://security.apple.com/blog/imessage-pq3/">Apple has been incorporating PQC key encapsulation into iMessage since 2023</a>, it's probably in the works.  </p>
 
 
       <h3>[April 8th, 2026]  <a href="https://ethz.ch/en/news-and-events/eth-news/news/2026/04/a-new-trick-brings-stability-to-quantum-operations.html">A new trick brings stability to quantum computers</a></h3>
       <p><b>ETH Zürich</b> - <i>Oliver Morsch, freelance author</i></p>
-      <p>This is a press release about an academic development at ETH Zurich, where researchers improved upon neutral atom quantum computing by creating a SWAP gate, also called quantum exchange, with only geometric phase.  Geometric phase causes the particle state to switch depending on its path, and is quite robust against noise because neutral particles stay in a low-energy state, leveraging tunneling and collisions to apply these swap gates to thousands of qubits simultaneously.</p>
-      <p>Geometric phase is a cool trick involving changing the electron spin of a qubit by 360 degrees so that it points in the same direction, but this changes the phase of the wavefunction by 180 degrees, effectively flipping it.  Then, the researchers brought the qubits close enough in space so the wavefunctions overlapped in superposition.  Geometric phase is independent of how quickly the atoms are manipulated, making it highly precise (99.91%).  Entanglement could be created with half-SWAP gates, induced by atomic collisions, but this has not yet been done by the researchers.</p>
+      <p>This is a press release about an academic development at ETH Zurich, where researchers improved upon neutral atom quantum computing by creating a SWAP gate, also called quantum exchange, with only geometric phase.  
+      Geometric phase causes the particle state to switch depending on its path, and is quite robust against noise because neutral particles stay in a low-energy state, leveraging tunneling and collisions to apply these swap gates to thousands of qubits simultaneously.</p>
+      <p>Geometric phase is a cool trick involving changing the electron spin of a qubit by 360 degrees so that it points in the same direction, but this changes the phase of the wavefunction by 180 degrees, effectively flipping it.  
+      Then, the researchers brought the qubits close enough in space so the wavefunctions overlapped in superposition.  
+      Geometric phase is independent of how quickly the atoms are manipulated, making it highly precise (99.91%).  
+      Entanglement could be created with half-SWAP gates, induced by atomic collisions, but this has not yet been done by the researchers.</p>
       
 
       <h3>[April 8th, 2026]  <a href="https://www.nature.com/articles/s41586-026-10285-1">Protected quantum gates using qubit doublons in dynamic optical lattices</a></h3>
       <p><b>Nature (paywalled)</b> - <i>Yann Kiefer, Zijie Zhu, Lars Fischer, Samuel Jele, Marius Gachter, Giacomo Bisson, Konrad Viebahn, and Tilman Esslinger</i>
-      <p>The research paper associated with the press release above.  Paywalled, I've only read the abstract thus far.</p>
+      <p>The research paper associated with the press release above.  
+      Paywalled, I've only read the abstract thus far.</p>
 
 
       <h3>[April 7th, 2026]  <a href="https://blog.cloudflare.com/post-quantum-roadmap/">Cloudflare targets 2029 for full post-quantum security</a></h3>
@@ -82,22 +96,38 @@
       
       <h3>[April 6th, 2026]  <a href="https://words.filippo.io/crqc-timeline/">A cryptography engineer's perspective on quantum computing timelines</a></h3>
       <p><b>Filippo Valsorda</b> - <i>Blog by a senior cryptographic engineer and software developer on the Golang team</i></p>
-      <p>Valsorda describes the reasoning behind his change of position regarding PQC and why the transition to PQC must be accelerated, and announces ML-DSA will be added to X.509 with exception for Merkle Tree Certifikates for WebPKI.  His advice is "any non-PQ key exchange should be considered a potential active compromise, worthy of warning" and "we need to forget about non-interactive key exchanges (NIKEs) for a while."  He also advocates for not bothering with hybrid classic+PQC crypto, and suggests that symmetric encryption should be at 128-bit strength (as opposed to the 256-bit strength that CNSA 2.0 demands).  And, he draws attention to file encryption being vulnerable and the need to "error out on non-PQC age recipient types soon."</p>
+      <p>Valsorda describes the reasoning behind his change of position regarding PQC and why the transition to PQC must be accelerated, and announces ML-DSA will be added to X.509 with exception for Merkle Tree Certifikates for WebPKI.  
+      His advice is "any non-PQ key exchange should be considered a potential active compromise, worthy of warning" and "we need to forget about non-interactive key exchanges (NIKEs) for a while."  
+      He also advocates for not bothering with hybrid classic+PQC crypto, and suggests that symmetric encryption should be at 128-bit strength (as opposed to the 256-bit strength that CNSA 2.0 demands).
+      And, he draws attention to file encryption being vulnerable and the need to "error out on non-PQC age recipient types soon."</p>
 
 
       <h3>[March 31st, 2026] <a href="https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/">Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly</a></h3>
       <p><b>Google Research and Google Quantum AI</b> - <i>Ryan Babbush (Director of Research and Quantum Algorithms) and Harmut Neven, VP of Engineering, Google Quantum AI, and Google Research</i>
-      <p>Blog post claiming that Google has drastically improved on a quantum algorithm for breaking ECC.  Algorithm is not revealed, but they provide a zero-knowledge proof for it.</p>
+      <p>Blog post claiming that Google has drastically improved on a quantum algorithm for breaking ECC.  
+      Algorithm is not revealed, but they provide a zero-knowledge proof for it.</p>
 
 
       <h3>[March 30th, 2026]  <a href="https://arxiv.org/pdf/2603.28627">Shor's algorithm is possible with as few as 10,000 reconfigurable atomic qubits</a></h3>
       <p><b> Collab between Oratomic, CalTech, and UC Berkeley</b> - <i>Madelyn Cain, Qian Xu, Robbie King, Lewis R.B Picard, Harry Levine, Manuel Endres, John Prskill, Hsin-Yuan Huang, Dolev Bluvstein</i>
-      <p><strong>This article is not peer-reviewed, and authors have a financial stake in quantum computing company Oratomic.</strong>  Algorithm is theoretical and is currently under wider academic review.</p>
+      <p><strong>This article is not peer-reviewed, and authors have a financial stake in quantum computing company Oratomic.</strong>  
+      Algorithm is theoretical and is currently under wider academic review.</p>
 
 
       <h3>[March 24th, 2026]  <a href="https://blog.google/innovation-and-ai/technology/research/neutral-atom-quantum-computers/">Building superconducting and neutral atom quantum computers</a></h3>
       <p><b>Google Quantum AI</b> - <i>Harmut Neven, founder and leader of Google Quantum AI</i>
       <p>Blog post to announce that Google Quantum AI is expanding quantum computing research to include neutral atom quantum computers, the same type of quantum computer that has enabled the enormous scale-up in number of qubits.</p>
+
+      <h3>[August 27th, 2024]  <a href="https://arxiv.org/pdf/2408.13687">Quantum error correction below the surface code threshold</a></h3>
+      <p><b>Google Quantum AI and Collaborators</b> - <i>(100+ collaborators listed on Page 8 from Google Research and DeepMind, University of Massachusetts Amherst, UC Santa Barbara, University of Connecticut Storrs, Auburn University, ETH Zurich in Switzerland, MIT, UC Riverside, and Yale)</i></p>
+      <p>Seminal research paper published in the journal <a href="https://www.nature.com/articles/s41586-024-08449-y">Nature</a> as open access.
+      Quantum error correction (combining many physical qubits into one logical qubit) is critical for Shor's algorithm, and requires a physical error rate to be below a critical threshold to be feasible for real-world execution. 
+      The authors empirically demonstrate that Google's superconducting processor, Willow, is capable of a sufficient degree of quantum error correction to fulfill the requirements for a cryptographically-relevant quantum computer should it be scaled-up successfully.
+      Experiments were run on 74-qubit and 105-qubit processors.</p>
+      
+      <p><b>Addendum:</b> <i>April 29th, 2026</i> - 
+      At time of writing, the Willow quantum computer <a href="https://blog.google/innovation-and-ai/technology/research/google-willow-quantum-chip/">scaled to 105 qubits in July 2025</a>, but it has not scaled further since, which has been the case across-the-board for superconducting quantum computers.
+      Since then, Google and others have achieved better scaling results with neutral atom quantum computers.</p>
 
       <p></p>
       <p><i>© 2026 Arthur Savage. All Rights Reserved.</i></p>
